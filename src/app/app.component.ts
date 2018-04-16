@@ -16,4 +16,10 @@ export class AppComponent {
   constructor(private store: Store<State>) {
     this.count$ = store.pipe(select('count'));
   }
+
+  count() {
+    this.store.dispatch({
+      type: 'COUNT'
+    })
+  }
 }
